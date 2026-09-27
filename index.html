@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edilaine Santos | Projetos</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8fc;
+            color: #172033;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            text-align: center;
+            padding: 70px 20px 80px;
+        }
+
+        header h1 {
+            font-size: 46px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.92;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: -40px auto 50px;
+            padding: 0 20px;
+        }
+
+        .apresentacao {
+            background: white;
+            border-radius: 22px;
+            padding: 35px;
+            text-align: center;
+            box-shadow: 0 15px 45px rgba(15, 23, 42, 0.10);
+            margin-bottom: 30px;
+        }
+
+        .apresentacao h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .apresentacao p {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .projeto {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            transition: 0.2s;
+        }
+
+        .projeto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.14);
+        }
+
+        .icone {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .projeto h3 {
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .projeto p {
+            color: #64748b;
+            line-height: 1.5;
+            min-height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .botao {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 9px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .botao:hover {
+            background: #1d4ed8;
+        }
+
+        .instagram {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .instagram a {
+            color: #2563eb;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 750px) {
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            .projetos {
+                grid-template-columns: 1fr;
+            }
+
+            .apresentacao {
+                padding: 25px 20px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Edilaine Santos</h1>
+
+        <p>Projetos, ferramentas e aplicações desenvolvidas por mim.</p>
+
+    </header>
+
+
+    <main>
+
+        <section class="apresentacao">
+
+            <h2>Meus projetos</h2>
+
+            <p>
+                Aqui você pode conhecer e acessar alguns dos projetos
+                que estou desenvolvendo com tecnologia.
+            </p>
+
+        </section>
+
+
+        <section class="projetos">
+
+
+            <article class="projeto">
+
+                <div class="icone">🖼️</div>
+
+                <h3>Pôster Gigante</h3>
+
+                <p>
+                    Transforme uma imagem em um pôster grande
+                    dividido em várias folhas A4.
+                </p>
+
+                <a
+                    class="botao"
+                    href="https://edilainesantosz.github.io/poster-gigante/"
+                    target="_blank"
+                >
+                    Acessar site
+                </a>
+
+            </article>
+
+
+            <article class="projeto">
+
+                <div class="icone">💰</div>
+
+                <h3>Orçamento Fácil</h3>
+
+                <p>
+                    Ferramenta para criar orçamentos de forma
+                    simples e organizada.
+                </p>
+
+                <a
+                    class="botao"
+                    href="https://github.com/edilainesantosz/orcamento-facil"
+                    target="_blank"
+                >
+                    Ver projeto
+                </a>
+
+            </article>
+
+
+            <article class="projeto">
+
+                <div class="icone">🎟️</div>
+
+                <h3>Gerador de Rifa</h3>
+
+                <p>
+                    Gerador de rifas em PDF com suporte
+                    para até 5.000 números.
+                </p>
+
+                <a
+                    class="botao"
+                    href="https://github.com/edilainesantosz/rifa-5000-numeros"
+                    target="_blank"
+                >
+                    Ver projeto
+                </a>
+
+            </article>
+
+
+        </section>
+
+
+        <div class="instagram">
+
+            Instagram:
+            <a
+                href="https://www.instagram.com/edilainesantosz/"
+                target="_blank"
+            >
+                @edilainesantosz
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Desenvolvido por
+            <a
+                href="https://www.instagram.com/edilainesantosz/"
+                target="_blank"
+            >
+                @edilainesantosz
+            </a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
