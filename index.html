@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Edilaine Santos</title>
+    <title>Edilaine Santos | Projetos</title>
 
     <style>
 
@@ -20,7 +21,9 @@
             color: #11152f;
         }
 
-        /* MENU */
+        /* =========================
+           MENU
+        ========================= */
 
         header {
             position: fixed;
@@ -35,39 +38,68 @@
 
             padding: 0 7%;
 
-            background: rgba(255,255,255,0.92);
+            background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(12px);
 
-            z-index: 1000;
             border-bottom: 1px solid #eeeeF5;
+
+            z-index: 1000;
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 19px;
             font-weight: 700;
+            color: #11152f;
         }
 
         .menu {
             color: #5b20e6;
-            font-weight: 600;
+            font-weight: 700;
+            padding: 25px 5px 21px;
+
+            border-bottom: 3px solid #6d28d9;
         }
 
         .social-top {
             display: flex;
-            gap: 18px;
-            align-items: center;
+            gap: 12px;
         }
 
         .social-top a {
-            text-decoration: none;
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            border: 1px solid #e2dff0;
+            border-radius: 50%;
+
             color: #11152f;
-            font-size: 22px;
+            text-decoration: none;
+
+            font-size: 19px;
+
+            transition: 0.2s;
         }
 
-        /* HERO */
+        .social-top a:hover {
+            transform: translateY(-3px);
+            color: #5b20e6;
+            border-color: #9b72ff;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
-            min-height: 520px;
+
+            min-height: 500px;
 
             padding: 120px 7% 60px;
 
@@ -75,12 +107,14 @@
             align-items: center;
 
             background:
+
                 linear-gradient(
                     90deg,
                     rgba(255,255,255,0.98) 0%,
-                    rgba(255,255,255,0.93) 42%,
-                    rgba(255,255,255,0.20) 75%
+                    rgba(255,255,255,0.94) 38%,
+                    rgba(255,255,255,0.25) 75%
                 ),
+
                 url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=85");
 
             background-size: cover;
@@ -93,151 +127,256 @@
 
         .mini {
             color: #5b20e6;
+
             letter-spacing: 5px;
+
             font-size: 13px;
+
             font-weight: bold;
-            margin-bottom: 20px;
+
+            margin-bottom: 18px;
         }
 
         .hero h1 {
-            font-size: clamp(52px, 7vw, 82px);
-            line-height: 0.95;
-            margin-bottom: 35px;
+
+            font-size: clamp(48px, 6vw, 76px);
+
+            line-height: 1;
+
+            margin-bottom: 32px;
+
+            color: #11152f;
         }
 
+
+        /* =========================
+           BOTÕES
+        ========================= */
+
         .botoes {
+
             display: flex;
+
             gap: 15px;
+
             flex-wrap: wrap;
         }
 
         .botao {
+
             display: inline-flex;
+
             align-items: center;
+
             gap: 10px;
 
-            padding: 16px 25px;
+            padding: 15px 23px;
 
             border-radius: 12px;
 
             text-decoration: none;
+
             font-weight: bold;
 
             transition: 0.25s;
         }
 
         .github {
+
             color: white;
-            background: linear-gradient(135deg, #5b20e6, #7b42f6);
-            box-shadow: 0 10px 25px rgba(91,32,230,0.25);
+
+            background: linear-gradient(
+                135deg,
+                #5b20e6,
+                #7b42f6
+            );
+
+            box-shadow:
+                0 10px 25px rgba(91,32,230,0.25);
         }
 
         .instagram {
+
             color: #5b20e6;
+
             background: white;
+
             border: 1px solid #9b72ff;
         }
 
         .botao:hover {
+
             transform: translateY(-3px);
         }
 
-        /* PROJETOS */
+
+        /* =========================
+           PROJETOS
+        ========================= */
 
         .projetos {
-            max-width: 1320px;
+
+            max-width: 1400px;
+
             margin: auto;
+
             padding: 65px 7%;
         }
 
         .linha-roxa {
+
             width: 42px;
+
             height: 4px;
+
             background: #6d28d9;
+
             margin-bottom: 18px;
+
             border-radius: 10px;
         }
 
         .projetos h2 {
+
             font-size: 38px;
+
             margin-bottom: 35px;
         }
 
         .cards {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
+
+        /* =========================
+           CARD
+        ========================= */
+
         .card {
+
             background: white;
+
             border-radius: 18px;
+
             overflow: hidden;
 
-            box-shadow: 0 10px 35px rgba(25,20,60,0.08);
+            box-shadow:
+                0 10px 35px rgba(25,20,60,0.08);
 
             transition: 0.25s;
         }
 
         .card:hover {
+
             transform: translateY(-7px);
-            box-shadow: 0 18px 40px rgba(25,20,60,0.14);
+
+            box-shadow:
+                0 18px 40px rgba(25,20,60,0.14);
         }
 
-        .card-imagem {
-            height: 190px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
 
-            font-size: 45px;
-            color: white;
+        /* =========================
+           PREVIEW DO PROJETO
+        ========================= */
+
+        .preview {
+
+            height: 220px;
+
+            overflow: hidden;
+
+            background: #111827;
+
+            position: relative;
         }
 
-        .orcamento {
-            background: linear-gradient(135deg,#0757c9,#3b82f6);
+        .preview iframe {
+
+            width: 100%;
+
+            height: 520px;
+
+            border: none;
+
+            transform: scale(0.72);
+
+            transform-origin: top left;
+
+            width: 139%;
+
+            pointer-events: none;
         }
 
-        .rifa {
-            background: linear-gradient(135deg,#4c087d,#a855f7);
-        }
 
-        .poster {
-            background: linear-gradient(135deg,#ec4899,#f97316);
-        }
+        /* =========================
+           CONTEÚDO DO CARD
+        ========================= */
 
         .card-conteudo {
+
             padding: 24px;
         }
 
         .card h3 {
+
             font-size: 24px;
+
             margin-bottom: 10px;
         }
 
         .card p {
+
             color: #62677a;
+
             line-height: 1.5;
+
             min-height: 48px;
         }
 
+
+        /* =========================
+           TAGS
+        ========================= */
+
         .tags {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 7px;
+
             margin: 18px 0;
         }
 
         .tag {
+
             background: #f0ebff;
+
             color: #5b20e6;
+
             padding: 7px 11px;
+
             border-radius: 20px;
+
             font-size: 12px;
+
             font-weight: bold;
         }
 
+
+        /* =========================
+           BOTÃO PROJETO
+        ========================= */
+
         .ver-projeto {
+
             display: block;
 
             padding: 13px;
@@ -245,87 +384,159 @@
             text-align: center;
 
             color: #5b20e6;
+
             border: 1px solid #9b72ff;
+
             border-radius: 10px;
 
             text-decoration: none;
+
             font-weight: bold;
 
             transition: 0.2s;
         }
 
         .ver-projeto:hover {
+
             background: #5b20e6;
+
             color: white;
         }
 
-        /* RODAPÉ */
+
+        /* =========================
+           RODAPÉ
+        ========================= */
 
         footer {
+
             border-top: 1px solid #e5e2ee;
 
             padding: 30px 7%;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             background: white;
         }
 
         footer strong {
-            font-size: 18px;
+
+            font-size: 17px;
         }
 
         footer a {
+
             color: #5b20e6;
+
             text-decoration: none;
+
             font-weight: bold;
         }
 
-        /* CELULAR */
 
-        @media (max-width: 850px) {
+        /* =========================
+           CELULAR
+        ========================= */
 
-            header {
-                padding: 0 5%;
-            }
+        @media (max-width: 900px) {
 
-            .social-top {
-                display: none;
+            .cards {
+
+                grid-template-columns: 1fr;
             }
 
             .hero {
-                padding: 120px 7% 60px;
 
                 background:
                     linear-gradient(
                         rgba(255,255,255,0.94),
                         rgba(255,255,255,0.94)
                     ),
+
                     url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80");
+
+                background-size: cover;
             }
 
-            .cards {
-                grid-template-columns: 1fr;
+            .hero h1 {
+
+                font-size: 52px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+
+                padding: 0 5%;
+            }
+
+            .logo {
+
+                font-size: 17px;
+            }
+
+            .social-top {
+
+                display: none;
+            }
+
+            .hero {
+
+                padding: 120px 7% 60px;
+            }
+
+            .hero h1 {
+
+                font-size: 45px;
+            }
+
+            .botoes {
+
+                flex-direction: column;
+            }
+
+            .botao {
+
+                justify-content: center;
+            }
+
+            .projetos {
+
+                padding: 50px 5%;
             }
 
             .projetos h2 {
-                font-size: 32px;
+
+                font-size: 31px;
             }
 
             footer {
+
                 flex-direction: column;
+
                 gap: 15px;
+
+                text-align: center;
             }
         }
 
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- MENU -->
+
+    <!-- =========================
+         MENU
+    ========================= -->
 
     <header>
 
@@ -339,13 +550,19 @@
 
         <div class="social-top">
 
-            <a href="https://github.com/edilainesantosz"
-               target="_blank">
+            <a
+                href="https://github.com/edilainesantosz"
+                target="_blank"
+                title="GitHub"
+            >
                 ◉
             </a>
 
-            <a href="https://www.instagram.com/edilainesantosz/"
-               target="_blank">
+            <a
+                href="https://www.instagram.com/edilainesantosz/"
+                target="_blank"
+                title="Instagram"
+            >
                 ◎
             </a>
 
@@ -354,7 +571,9 @@
     </header>
 
 
-    <!-- INÍCIO -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
 
@@ -375,7 +594,8 @@
                     href="https://github.com/edilainesantosz"
                     target="_blank"
                 >
-                    ◉ &nbsp; Ver meu GitHub →
+                    ◉
+                    Ver meu GitHub →
                 </a>
 
                 <a
@@ -383,7 +603,8 @@
                     href="https://www.instagram.com/edilainesantosz/"
                     target="_blank"
                 >
-                    ◎ &nbsp; Siga no Instagram
+                    ◎
+                    Siga no Instagram
                     @edilainesantosz
                 </a>
 
@@ -394,7 +615,9 @@
     </section>
 
 
-    <!-- PROJETOS -->
+    <!-- =========================
+         PROJETOS
+    ========================= -->
 
     <section class="projetos">
 
@@ -408,12 +631,17 @@
         <div class="cards">
 
 
-            <!-- ORÇAMENTO -->
+            <!-- ORÇAMENTO FÁCIL -->
 
             <div class="card">
 
-                <div class="card-imagem orcamento">
-                    💰
+                <div class="preview">
+
+                    <iframe
+                        src="https://edilainesantosz.github.io/orcamento-facil/"
+                        title="Orçamento Fácil"
+                    ></iframe>
+
                 </div>
 
                 <div class="card-conteudo">
@@ -430,10 +658,21 @@
 
                     <div class="tags">
 
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Supabase</span>
+                        <span class="tag">
+                            HTML
+                        </span>
+
+                        <span class="tag">
+                            CSS
+                        </span>
+
+                        <span class="tag">
+                            JavaScript
+                        </span>
+
+                        <span class="tag">
+                            Supabase
+                        </span>
 
                     </div>
 
@@ -442,7 +681,7 @@
                         href="https://edilainesantosz.github.io/orcamento-facil/"
                         target="_blank"
                     >
-                        Ver projeto →
+                        ↗ &nbsp; Ver projeto →
                     </a>
 
                 </div>
@@ -454,8 +693,13 @@
 
             <div class="card">
 
-                <div class="card-imagem rifa">
-                    🎟️
+                <div class="preview">
+
+                    <iframe
+                        src="https://edilainesantosz.github.io/rifa-5000-numeros/"
+                        title="Gerador de Rifa"
+                    ></iframe>
+
                 </div>
 
                 <div class="card-conteudo">
@@ -472,10 +716,21 @@
 
                     <div class="tags">
 
-                        <span class="tag">HTML</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">PDFKit</span>
+                        <span class="tag">
+                            HTML
+                        </span>
+
+                        <span class="tag">
+                            TypeScript
+                        </span>
+
+                        <span class="tag">
+                            Node.js
+                        </span>
+
+                        <span class="tag">
+                            PDFKit
+                        </span>
 
                     </div>
 
@@ -484,7 +739,7 @@
                         href="https://edilainesantosz.github.io/rifa-5000-numeros/"
                         target="_blank"
                     >
-                        Ver projeto →
+                        ↗ &nbsp; Ver projeto →
                     </a>
 
                 </div>
@@ -492,12 +747,17 @@
             </div>
 
 
-            <!-- PÔSTER -->
+            <!-- PÔSTER GIGANTE -->
 
             <div class="card">
 
-                <div class="card-imagem poster">
-                    🖼️
+                <div class="preview">
+
+                    <iframe
+                        src="https://edilainesantosz.github.io/poster-gigante/"
+                        title="Pôster Gigante"
+                    ></iframe>
+
                 </div>
 
                 <div class="card-conteudo">
@@ -514,9 +774,17 @@
 
                     <div class="tags">
 
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
+                        <span class="tag">
+                            HTML
+                        </span>
+
+                        <span class="tag">
+                            CSS
+                        </span>
+
+                        <span class="tag">
+                            JavaScript
+                        </span>
 
                     </div>
 
@@ -525,7 +793,7 @@
                         href="https://edilainesantosz.github.io/poster-gigante/"
                         target="_blank"
                     >
-                        Ver projeto →
+                        ↗ &nbsp; Ver projeto →
                     </a>
 
                 </div>
@@ -538,7 +806,9 @@
     </section>
 
 
-    <!-- RODAPÉ -->
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
 
     <footer>
 
@@ -555,5 +825,7 @@
 
     </footer>
 
+
 </body>
+
 </html>
