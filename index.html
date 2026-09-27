@@ -1,159 +1,322 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Edilaine Santos | Projetos</title>
+    <title>Edilaine Santos</title>
 
     <style>
 
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f8fc;
-            color: #172033;
-            min-height: 100vh;
+            background: #f8f7fc;
+            color: #11152f;
         }
+
+        /* MENU */
 
         header {
-            background: linear-gradient(135deg, #2563eb, #1e40af);
-            color: white;
-            text-align: center;
-            padding: 70px 20px 80px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(12px);
+
+            z-index: 1000;
+            border-bottom: 1px solid #eeeeF5;
         }
 
-        header h1 {
-            font-size: 46px;
-            margin-bottom: 12px;
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
         }
 
-        header p {
-            font-size: 18px;
-            opacity: 0.92;
+        .menu {
+            color: #5b20e6;
+            font-weight: 600;
         }
 
-        main {
-            max-width: 1000px;
-            margin: -40px auto 50px;
-            padding: 0 20px;
+        .social-top {
+            display: flex;
+            gap: 18px;
+            align-items: center;
         }
 
-        .apresentacao {
-            background: white;
-            border-radius: 22px;
-            padding: 35px;
-            text-align: center;
-            box-shadow: 0 15px 45px rgba(15, 23, 42, 0.10);
-            margin-bottom: 30px;
+        .social-top a {
+            text-decoration: none;
+            color: #11152f;
+            font-size: 22px;
         }
 
-        .apresentacao h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
+        /* HERO */
+
+        .hero {
+            min-height: 520px;
+
+            padding: 120px 7% 60px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.98) 0%,
+                    rgba(255,255,255,0.93) 42%,
+                    rgba(255,255,255,0.20) 75%
+                ),
+                url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
         }
 
-        .apresentacao p {
-            color: #64748b;
-            font-size: 16px;
-            line-height: 1.6;
+        .hero-content {
+            max-width: 650px;
         }
 
-        .projetos {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .projeto {
-            background: white;
-            border-radius: 18px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-            transition: 0.2s;
-        }
-
-        .projeto:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.14);
-        }
-
-        .icone {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .projeto h3 {
-            font-size: 21px;
-            margin-bottom: 10px;
-        }
-
-        .projeto p {
-            color: #64748b;
-            line-height: 1.5;
-            min-height: 70px;
+        .mini {
+            color: #5b20e6;
+            letter-spacing: 5px;
+            font-size: 13px;
+            font-weight: bold;
             margin-bottom: 20px;
         }
 
-        .botao {
-            display: inline-block;
-            width: 100%;
-            padding: 12px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            text-align: center;
-            border-radius: 9px;
-            font-weight: bold;
-            transition: 0.2s;
+        .hero h1 {
+            font-size: clamp(52px, 7vw, 82px);
+            line-height: 0.95;
+            margin-bottom: 35px;
         }
 
-        .botao:hover {
-            background: #1d4ed8;
+        .botoes {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .botao {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 16px 25px;
+
+            border-radius: 12px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+        .github {
+            color: white;
+            background: linear-gradient(135deg, #5b20e6, #7b42f6);
+            box-shadow: 0 10px 25px rgba(91,32,230,0.25);
         }
 
         .instagram {
-            text-align: center;
-            margin-top: 30px;
+            color: #5b20e6;
+            background: white;
+            border: 1px solid #9b72ff;
         }
 
-        .instagram a {
-            color: #2563eb;
-            font-weight: bold;
-            text-decoration: none;
+        .botao:hover {
+            transform: translateY(-3px);
         }
+
+        /* PROJETOS */
+
+        .projetos {
+            max-width: 1320px;
+            margin: auto;
+            padding: 65px 7%;
+        }
+
+        .linha-roxa {
+            width: 42px;
+            height: 4px;
+            background: #6d28d9;
+            margin-bottom: 18px;
+            border-radius: 10px;
+        }
+
+        .projetos h2 {
+            font-size: 38px;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+
+            box-shadow: 0 10px 35px rgba(25,20,60,0.08);
+
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(25,20,60,0.14);
+        }
+
+        .card-imagem {
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 45px;
+            color: white;
+        }
+
+        .orcamento {
+            background: linear-gradient(135deg,#0757c9,#3b82f6);
+        }
+
+        .rifa {
+            background: linear-gradient(135deg,#4c087d,#a855f7);
+        }
+
+        .poster {
+            background: linear-gradient(135deg,#ec4899,#f97316);
+        }
+
+        .card-conteudo {
+            padding: 24px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #62677a;
+            line-height: 1.5;
+            min-height: 48px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 18px 0;
+        }
+
+        .tag {
+            background: #f0ebff;
+            color: #5b20e6;
+            padding: 7px 11px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .ver-projeto {
+            display: block;
+
+            padding: 13px;
+
+            text-align: center;
+
+            color: #5b20e6;
+            border: 1px solid #9b72ff;
+            border-radius: 10px;
+
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .ver-projeto:hover {
+            background: #5b20e6;
+            color: white;
+        }
+
+        /* RODAPÉ */
 
         footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #64748b;
-            font-size: 14px;
+            border-top: 1px solid #e5e2ee;
+
+            padding: 30px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: white;
+        }
+
+        footer strong {
+            font-size: 18px;
         }
 
         footer a {
-            color: #2563eb;
+            color: #5b20e6;
             text-decoration: none;
             font-weight: bold;
         }
 
-        @media (max-width: 750px) {
+        /* CELULAR */
 
-            header h1 {
-                font-size: 34px;
+        @media (max-width: 850px) {
+
+            header {
+                padding: 0 5%;
             }
 
-            .projetos {
+            .social-top {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 7% 60px;
+
+                background:
+                    linear-gradient(
+                        rgba(255,255,255,0.94),
+                        rgba(255,255,255,0.94)
+                    ),
+                    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80");
+            }
+
+            .cards {
                 grid-template-columns: 1fr;
             }
 
-            .apresentacao {
-                padding: 25px 20px;
+            .projetos h2 {
+                font-size: 32px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 15px;
             }
         }
 
@@ -162,130 +325,235 @@
 
 <body>
 
+    <!-- MENU -->
+
     <header>
 
-        <h1>Edilaine Santos</h1>
+        <div class="logo">
+            Edilaine Santos
+        </div>
 
-        <p>Projetos, ferramentas e aplicações desenvolvidas por mim.</p>
+        <div class="menu">
+            Início
+        </div>
 
-    </header>
+        <div class="social-top">
 
+            <a href="https://github.com/edilainesantosz"
+               target="_blank">
+                ◉
+            </a>
 
-    <main>
-
-        <section class="apresentacao">
-
-            <h2>Meus projetos</h2>
-
-            <p>
-                Aqui você pode conhecer e acessar alguns dos projetos
-                que estou desenvolvendo com tecnologia.
-            </p>
-
-        </section>
-
-
-        <section class="projetos">
-
-
-            <article class="projeto">
-
-                <div class="icone">🖼️</div>
-
-                <h3>Pôster Gigante</h3>
-
-                <p>
-                    Transforme uma imagem em um pôster grande
-                    dividido em várias folhas A4.
-                </p>
-
-                <a
-                    class="botao"
-                    href="https://edilainesantosz.github.io/poster-gigante/"
-                    target="_blank"
-                >
-                    Acessar site
-                </a>
-
-            </article>
-
-
-            <article class="projeto">
-
-                <div class="icone">💰</div>
-
-                <h3>Orçamento Fácil</h3>
-
-                <p>
-                    Ferramenta para criar orçamentos de forma
-                    simples e organizada.
-                </p>
-
-                <a
-                    class="botao"
-                    href="https://github.com/edilainesantosz/orcamento-facil"
-                    target="_blank"
-                >
-                    Ver projeto
-                </a>
-
-            </article>
-
-
-            <article class="projeto">
-
-                <div class="icone">🎟️</div>
-
-                <h3>Gerador de Rifa</h3>
-
-                <p>
-                    Gerador de rifas em PDF com suporte
-                    para até 5.000 números.
-                </p>
-
-                <a
-                    class="botao"
-                    href="https://github.com/edilainesantosz/rifa-5000-numeros"
-                    target="_blank"
-                >
-                    Ver projeto
-                </a>
-
-            </article>
-
-
-        </section>
-
-
-        <div class="instagram">
-
-            Instagram:
-            <a
-                href="https://www.instagram.com/edilainesantosz/"
-                target="_blank"
-            >
-                @edilainesantosz
+            <a href="https://www.instagram.com/edilainesantosz/"
+               target="_blank">
+                ◎
             </a>
 
         </div>
 
-    </main>
+    </header>
 
+
+    <!-- INÍCIO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="mini">
+                OLÁ, EU SOU
+            </div>
+
+            <h1>
+                Edilaine Santos
+            </h1>
+
+            <div class="botoes">
+
+                <a
+                    class="botao github"
+                    href="https://github.com/edilainesantosz"
+                    target="_blank"
+                >
+                    ◉ &nbsp; Ver meu GitHub →
+                </a>
+
+                <a
+                    class="botao instagram"
+                    href="https://www.instagram.com/edilainesantosz/"
+                    target="_blank"
+                >
+                    ◎ &nbsp; Siga no Instagram
+                    @edilainesantosz
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJETOS -->
+
+    <section class="projetos">
+
+        <div class="linha-roxa"></div>
+
+        <h2>
+            Conheça meus projetos
+        </h2>
+
+
+        <div class="cards">
+
+
+            <!-- ORÇAMENTO -->
+
+            <div class="card">
+
+                <div class="card-imagem orcamento">
+                    💰
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h3>
+                        Orçamento Fácil
+                    </h3>
+
+                    <p>
+                        Ferramenta para criar orçamentos
+                        de forma simples e organizada,
+                        com geração de PDF.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Supabase</span>
+
+                    </div>
+
+                    <a
+                        class="ver-projeto"
+                        href="https://edilainesantosz.github.io/orcamento-facil/"
+                        target="_blank"
+                    >
+                        Ver projeto →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIFA -->
+
+            <div class="card">
+
+                <div class="card-imagem rifa">
+                    🎟️
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h3>
+                        Gerador de Rifa
+                    </h3>
+
+                    <p>
+                        Gerador de rifas em PDF
+                        com suporte para até
+                        5.000 números.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">HTML</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">PDFKit</span>
+
+                    </div>
+
+                    <a
+                        class="ver-projeto"
+                        href="https://edilainesantosz.github.io/rifa-5000-numeros/"
+                        target="_blank"
+                    >
+                        Ver projeto →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PÔSTER -->
+
+            <div class="card">
+
+                <div class="card-imagem poster">
+                    🖼️
+                </div>
+
+                <div class="card-conteudo">
+
+                    <h3>
+                        Pôster Gigante
+                    </h3>
+
+                    <p>
+                        Transforma uma imagem em
+                        um pôster grande dividido
+                        em várias folhas A4.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+
+                    </div>
+
+                    <a
+                        class="ver-projeto"
+                        href="https://edilainesantosz.github.io/poster-gigante/"
+                        target="_blank"
+                    >
+                        Ver projeto →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
 
     <footer>
 
-        <p>
-            Desenvolvido por
-            <a
-                href="https://www.instagram.com/edilainesantosz/"
-                target="_blank"
-            >
-                @edilainesantosz
-            </a>
-        </p>
+        <strong>
+            Edilaine Santos
+        </strong>
+
+        <a
+            href="https://www.instagram.com/edilainesantosz/"
+            target="_blank"
+        >
+            Instagram • @edilainesantosz
+        </a>
 
     </footer>
 
 </body>
-
 </html>
